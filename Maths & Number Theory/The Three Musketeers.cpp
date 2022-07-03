@@ -25,6 +25,9 @@ vector<string> subsets(string str){
 }
 
 
+// Three Musketeers
+// https://www.hackerearth.com/problem/algorithm/the-three-musketeers-6efd5f2d/
+
 int main(){
 	#ifndef ONLINE_JUDGE
 		freopen("input.txt", "r", stdin);

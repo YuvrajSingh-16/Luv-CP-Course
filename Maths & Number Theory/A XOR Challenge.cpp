@@ -3,6 +3,13 @@
 using namespace std;
 #define lli long long int
 
+// XOR Challenge
+// https://www.hackerearth.com/practice/basic-programming/bit-manipulation/basics-of-bit-manipulation/practice-problems/algorithm/xor-challenge-2420f189/
+
+
+// Input
+// 17
+
 int main(){
 	#ifndef ONLINE_JUDGE
 		freopen("input.txt", "r", stdin);

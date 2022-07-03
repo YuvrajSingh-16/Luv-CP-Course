@@ -24,13 +24,22 @@ vector<int> distinctPF(int x){
 	return ans;
 }
 
+// Hacker Decrypting Messages:
+//
+// https://www.hackerearth.com/practice/math/number-theory/basic-number-theory-2/practice-problems/algorithm/hacker-with-prime-bebe28ac/
+
+
+// // Concepts used
+// - Highest Prime
+// - Prime factorization
+// - Seive
 
 int main(){
 	#ifndef ONLINE_JUDGE
 		freopen("input.txt", "r", stdin);
 		freopen("output.txt", "w", stdout);
 	#endif
-		// Calculating highest prime factor of a number
+		// Calculating highest prime factor of a numbers till 1000010
 		for(int i=2; i<N; i++){
 			if(hp[i] == 0){
 				for(int j=i; j<N; j+=i){

@@ -15,6 +15,15 @@ int gcd(int a, int b){ // TC: O(log n) max
 	return gcd(b%a, a);
 }
 
+// // Question
+// Given an integer array A of size N, 
+// Monk needs you to answer T queries for him. 
+// In each query, he gives you 2 integers P and Q. 
+// In response to each of these queries, you need to tell Monk 
+// the count of numbers in array A. that are either divisible by P, Q, or both.
+
+// Link -> https://www.hackerearth.com/problem/algorithm/monk-and-divisor-conundrum-56e0eb99/
+
 
 int main(){
 	#ifndef ONLINE_JUDGE
