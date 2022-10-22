@@ -10,10 +10,10 @@ int depth[N];
 int height[N];
 
 // // Input
-// 6 9
+// 6 9 
 // 1 3 
 // 1 5 
-// 3 5  
+// 3 5 
 // 3 4 
 // 3 6 
 // 3 2 
@@ -43,6 +43,17 @@ void dfs(int vertex, int parent=0){
 }
 // TC: O(V+2*E)
 
+
+void tree_dfs(int vertex, int parent){
+
+	for(int child: graph[vertex]){
+		if(child == parent) continue;
+
+		depth[child] = depth[vertex]+1;
+		tree_dfs(child, vertex);
+		height[vertex] = max(height[vertext], height[child]+1);
+	}
+}
 
 int main(){
 	#ifndef ONLINE_JUDGE

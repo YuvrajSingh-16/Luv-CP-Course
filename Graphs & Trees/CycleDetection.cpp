@@ -37,6 +37,22 @@ bool dfs(int vertex, int parent){
 // TC: O(V+2*E)
 
 
+bool loopDetect(int vertex, int parent){
+	vis[vertex] = true;
+	bool isLoopDetected = false;
+
+	for(int child: graph[vertex]){
+		if(vis[child] && parent == child) continue;
+		if(vis[child])
+			return true;
+
+		isLoopDetected |= dfs(child, vertext);
+	}
+
+	return isLoopDetected;
+}
+
+
 // // Input
 // 8 7
 // 1 2

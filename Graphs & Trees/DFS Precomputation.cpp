@@ -62,6 +62,23 @@ void dfs(int vertex, int parent=0){
 // TC: O(V+2*E)
 
 
+void dfs(int vertex, int parent){
+	if(vertex%2 == 0)
+		even_cnt[vertex]++;
+
+	subtree_sum[vertex] += vertex;
+
+	for(int child: graph[vertex]){
+		if(child == parent)
+			continue;
+
+		dfs(child, vertex);
+		subtree_sum[child] += subtree_sum[child];
+		even_ct[vertex] += even_ct[child];
+	}
+}
+
+
 int main(){
 	#ifndef ONLINE_JUDGE
 		freopen("input.txt", "r", stdin);
